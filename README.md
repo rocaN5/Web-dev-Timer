@@ -1,6 +1,8 @@
 # Web stuff — Simple timer
 **Just practicing my JS skills**
 
+### Pages — https://rocan5.github.io/Web-dev-Timer/
+
 ```
 Todos :
 
