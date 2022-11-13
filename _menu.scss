@@ -39,7 +39,8 @@ nav.menu{
                 transition: $transition-delay;
             }
 
-            svg{
+            svg,
+            path{
                 width: 50%;
                 fill: #fff;
             }
