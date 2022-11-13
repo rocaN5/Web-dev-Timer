@@ -1,8 +1,14 @@
 nav.menu{
     display: flex;
-    flex-flow: column;
     width: 80px;
     height: 100%;
+
+    @media screen and (max-width: 700px){
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+    }
 
     ul{
         position: relative;
@@ -12,18 +18,28 @@ nav.menu{
         top: 10px;
         left: 10px;
         border-radius: 8px;
-        backdrop-filter: blur(10px) contrast(1.5);
-        -webkit-backdrop-filter: blur(10px) contrast(1.5);
+        backdrop-filter: contrast(1.5);
+        -webkit-backdrop-filter: contrast(1.5);
         display: flex;
         flex-flow: column;
         justify-content: center;
         background-color: $color-3;
+        @media screen and (max-width: 700px){
+            flex-flow: row;
+            justify-content: space-evenly;
+            left: 0;
+            top: 0;
+        }
 
         li{
             display: flex;
             position: relative;
             width: 100%;
             height: 60px;
+            @media screen and (max-width: 700px){
+                width: 60px;
+                height: 100%;
+            }
 
             button{
                 position: relative;
@@ -35,21 +51,77 @@ nav.menu{
                 cursor: pointer;
                 transition: $transition-delay;
                 background-color: transparent;
+                &::before{
+                    content: "Timer";
+                    display: block;
+                    position: absolute;
+                    opacity: 0;
+                    transition: 300ms;
+                    transition-timing-function: cubic-bezier(0.36, 0.35, 0.1, 1.96);
+                    font-family: "Roboto";
+                    font-size: 16px;
+                    color: #fff;
+                    background-color: rgba(0, 0, 0, 0.33);
+                    backdrop-filter: contrast(1.5);
+                    -webkit-backdrop-filter: contrast(1.5);
+                    right: 60px;
+                    padding: 4px 12px;
+                    border-radius: 6px;
+                    pointer-events: none;
+                    box-shadow: 0 0 4px 0px rgb(0 0 0 / 50%);
+                    white-space: nowrap;
+                    @media screen and (max-width: 700px){
+                        right: unset;
+                        text-align: center;
+                        top: 51px;
+                    }
+                }
 
-                &:hover,
-                &:active,
-                &:focus{
+                &:hover{
                     background-color: rgb(0 0 0 / 20%);
                     transition: $transition-delay;
                     border: none;
                     outline: none;
-                    color: transparent;
+
+                    &::before{
+                        opacity: 1;
+                        right: 84px;
+                        @media screen and (max-width: 700px){
+                            right: unset;
+                            text-align: center;
+                            top: 74px;
+                        }
+                    }
                 }
     
                 svg,
                 path{
                     width: 50%;
                     fill: #fff;
+                }
+            }
+
+            &:nth-child(2){
+                button{
+                    &::before{
+                        content: "Current Time";
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                button{
+                    &::before{
+                        content: "Stopwatch";
+                    }
+                }
+            }
+
+            &:nth-child(4){
+                button{
+                    &::before{
+                        content: "Special";
+                    }
                 }
             }
         }
