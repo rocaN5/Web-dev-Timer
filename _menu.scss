@@ -13,6 +13,7 @@ nav.menu{
         left: 10px;
         border-radius: 8px;
         backdrop-filter: blur(10px) contrast(1.5);
+        -webkit-backdrop-filter: blur(10px) contrast(1.5);
         display: flex;
         flex-flow: column;
         justify-content: center;
@@ -27,19 +28,20 @@ nav.menu{
             cursor: pointer;
             align-items: center;
             justify-content: center;
+            background-color: transparent;
 
             // &.timer{
             //     background-image: url('../img/menu/timer.svg');
             // }
 
             &:hover{
-                backdrop-filter: contrast(1.5);
                 background-color: $color-3;
                 transition: $transition-delay;
             }
 
             svg{
                 width: 50%;
+                fill: #fff;
             }
         }
     }

@@ -30,6 +30,7 @@
   border-radius: 10px;
   box-shadow: 0 0 25px 3px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   overflow: hidden;
 }
 
@@ -48,6 +49,7 @@ nav.menu ul {
   left: 10px;
   border-radius: 8px;
   backdrop-filter: blur(10px) contrast(1.5);
+  -webkit-backdrop-filter: blur(10px) contrast(1.5);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -62,14 +64,15 @@ nav.menu ul li {
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 nav.menu ul li:hover {
-  backdrop-filter: contrast(1.5);
   background-color: rgba(54, 54, 54, 0.2);
   transition: 300ms;
 }
 nav.menu ul li svg {
   width: 50%;
+  fill: #fff;
 }
 
 /* ••• Footer ••• */
