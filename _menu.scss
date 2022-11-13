@@ -51,6 +51,7 @@ nav.menu{
                 cursor: pointer;
                 transition: $transition-delay;
                 background-color: transparent;
+                -webkit-tap-highlight-color: rgba(0,0,0,0);
                 &::before{
                     content: "Timer";
                     display: block;

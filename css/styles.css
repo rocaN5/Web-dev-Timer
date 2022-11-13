@@ -138,6 +138,7 @@ nav.menu ul li button {
   cursor: pointer;
   transition: 300ms;
   background-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 nav.menu ul li button::before {
   content: "Timer";
