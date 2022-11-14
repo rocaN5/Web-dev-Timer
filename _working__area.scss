@@ -1,0 +1,56 @@
+.working__area {
+    width: calc(100% - 80px);
+    height: 100%;
+    position: relative;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 700px) {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__container {
+        width: calc(100% - 10px);
+        height: calc(100% - 20px);
+        box-shadow: none;
+        background-color: $color-3;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: contrast(1.5);
+        -webkit-backdrop-filter: contrast(1.5);
+        border-radius: 8px;
+        @media screen and (max-width: 700px) {
+            width: calc(100% - 20px);
+            height: calc(100% - 10px);
+        }
+    }
+
+    h1 {
+        color: #fff;
+        font-family: "Roboto";
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        font-size: 2rem;
+    }
+
+    .timer__container {
+        width: 80%;
+        height: 80%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        border: 1px solid; // DELETE after
+        justify-content: space-around; // change to space-between
+
+        .timer__value {
+            font-family: "Roboto";
+            font-size: 2rem;
+            color: #fff;
+            text-align: center;
+        }
+    }
+}
