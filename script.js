@@ -50,7 +50,7 @@ timerStart.addEventListener('click', () =>{
         };
     };
 });
-
+// b
 // timerStop.addEventListener('click', () =>{
 //     miliSeconds.innerText = "Stop";
 // });
